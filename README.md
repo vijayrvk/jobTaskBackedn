@@ -4,6 +4,8 @@
 
 ## Run `npm i`
 
+## Run `nodemon server.js` or `node server.js`
+
 open browser url `localhost:3214`
 
 In Postman
