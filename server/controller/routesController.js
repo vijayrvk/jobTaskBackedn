@@ -22,7 +22,6 @@ exports.getJobs = async function (req, res) {
     let limit = (req.query.limit) ? req.query.limit : 10;
     let offsetLimit = 0;
     let filter = {};
-
     if (offset === 1) {
         offsetLimit = 0;
         filter.offset = offsetLimit;
@@ -32,8 +31,8 @@ exports.getJobs = async function (req, res) {
     }
 
     filter.limit = limit;
-    if (req.query.filter) {
-        filter.where = req.query.filter;
+    if (!req.query.offset || !req.query.limit) {
+        filter.where = req.query
     }
 
 
